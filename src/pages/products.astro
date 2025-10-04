@@ -1,0 +1,16 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ProductCard from '../components/ProductCard.astro';
+---
+<Layout title="Produits & Services" description="Découvrez nos produits et services de tailleur pour femmes chez Abha au Maroc.">
+  <section class="py-5">
+    <div class="container">
+      <h1 class="text-center mb-4">Nos Produits & Services</h1>
+      <div class="row">
+        <div class="col-md-4"><ProductCard title="Couture Sur Mesure" image="/products/17a9e43e-6484-45c4-b7b7-e823ddc65bc8.png" description="Personnalisez votre tenue." /></div>
+        <div class="col-md-4"><ProductCard title="Collections Saisonnières" image="/products/826ebb1b-58d0-435b-92e9-c8a58912796e.png" description="Nouvelles tendances chaque saison." /></div>
+        <div class="col-md-4"><ProductCard title="Réparations & Ajustements" image="/products/7069a4cf-e1af-41ef-9f9e-d8c9aba38780.png" description="Services d'entretien pour vos vêtements." /></div>
+      </div>
+    </div>
+  </section>
+</Layout>

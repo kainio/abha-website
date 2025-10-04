@@ -1,0 +1,57 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+<Layout title="Contact" description="Contactez Abha pour vos besoins en couture sur mesure au Maroc.">
+  <section class="py-5">
+    <div class="container">
+      <h1 class="text-center mb-4">Formulaire de Contact</h1>
+      <form id="contactForm" class="row g-3">
+        <div class="col-md-6">
+          <label for="name" class="form-label">Nom</label>
+          <input type="text" class="form-control" id="name" required>
+        </div>
+        <div class="col-md-6">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email" required>
+        </div>
+        <div class="col-12">
+          <label for="message" class="form-label">Message</label>
+          <textarea class="form-control" id="message" rows="5" required></textarea>
+        </div>
+        <div class="col-12">
+          <label class="form-label">Envoyer via :</label>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="sendOption" id="whatsapp" value="whatsapp" checked>
+            <label class="form-check-label" for="whatsapp">WhatsApp</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="sendOption" id="facebook" value="facebook">
+            <label class="form-check-label" for="facebook">Facebook</label>
+          </div>
+        </div>
+        <div class="col-12 text-center">
+          <button type="submit" class="btn btn-primary">Envoyer</button>
+        </div>
+      </form>
+    </div>
+  </section>
+</Layout>
+
+<script>
+  document.getElementById('contactForm').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+    const option = document.querySelector('input[name="sendOption"]:checked').value;
+    
+    const text = `Nom: ${name}\nEmail: ${email}\nMessage: ${message}`;
+    let url;
+    if (option === 'whatsapp') {
+      url = `https://wa.me/+212774039505?text=${encodeURIComponent(text)}`; // Owner configures number
+    } else {
+      url = `https://m.me/abhaholla?text=${encodeURIComponent(text)}`; // Owner configures FB page ID
+    }
+    window.open(url, '_blank');
+  });
+</script>

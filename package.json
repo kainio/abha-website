@@ -9,6 +9,11 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.14.1"
+    "astro": "^5.14.1",
+    "bootstrap": "^5.3.8",
+    "bootswatch": "^5.3.8"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
   }
 }

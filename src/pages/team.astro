@@ -1,0 +1,16 @@
+---
+import Layout from '../layouts/Layout.astro';
+import TeamMember from '../components/TeamMember.astro';
+---
+<Layout title="Équipe" description="Rencontrez l'équipe derrière Abha, experts en tailleur pour femmes au Maroc.">
+  <section class="py-5">
+    <div class="container">
+      <h1 class="text-center mb-4">Notre Équipe</h1>
+      <div class="row">
+        <div class="col-md-4"><TeamMember name="Sara El" role="Fondatrice & Designer" image="https://placehold.co/300x300/jpeg?text=Sara" bio="Passionnée par la mode marocaine depuis 15 ans." /></div>
+        <div class="col-md-4"><TeamMember name="Nadia B." role="Couturière en Chef" image="https://placehold.co/300x300/jpeg?text=Nadia" bio="Experte en artisanat traditionnel." /></div>
+        <div class="col-md-4"><TeamMember name="Karim A." role="Responsable Marketing" image="https://placehold.co/300x300/jpeg?text=Karim" bio="Spécialiste en promotion de marques locales." /></div>
+      </div>
+    </div>
+  </section>
+</Layout>
