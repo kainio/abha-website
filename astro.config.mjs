@@ -7,4 +7,7 @@ export default defineConfig({
     base: '/abha-website', // e.g., '/abha-website'
     integrations: [],
     output: 'static', // Static site generation
+    build: {
+        assetsPrefix: '/abha-website/', // Prefix assets with base path
+     },
 });
